@@ -1,6 +1,6 @@
 const pokedexRoutes = (app, fs) => {
   // variables
-  const dataPath = './data/pokedex.json';
+  const dataPath = './pokemonData/pokedex.json';
 
   // READ
   app.get('/pokedex', (req, res) => {
