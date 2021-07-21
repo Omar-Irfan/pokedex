@@ -1,9 +1,9 @@
 import React from "react"
-import Pokemon from "./Pokemon"
+import PokemonList from "./PokemonList"
 
 function App() {
   return (
-<Pokemon/>
+<PokemonList/>
   );
 }
 
