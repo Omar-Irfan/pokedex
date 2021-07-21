@@ -6,6 +6,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import './extraCss.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 3,
     boxShadow: '0 3px 5px 2px grey',
     color: 'DarkBlue',
-    width: '60%',
+    width: '40%',
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -29,10 +30,10 @@ function Pokemon(props) {
   const thumbnail = `http://localhost:3001/thumbnails/${props.id}.png`
 
   const sprite = `http://localhost:3001/sprites/${props.id}MS.png`
+
   const classes = useStyles();
 
   return (
-
 
       <Accordion className={classes.root}>
         <AccordionSummary
@@ -50,7 +51,7 @@ function Pokemon(props) {
           </Grid>
         </AccordionSummary>
         <AccordionDetails>
-          <img src={thumbnail}/>
+          <img className="Thumbnail" src={thumbnail}/>
         <Grid className={classes.heading} container direction="column" alignItems="flex-end">
           <Typography>Types: {props.types}</Typography>
           <Typography>HP: {props.HP}</Typography>

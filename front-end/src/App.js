@@ -3,6 +3,8 @@ import PokemonList from "./PokemonList"
 import axios from "axios";
 import { useState, useEffect } from "react";
 
+
+
 function App() {
   const [state, setState] = useState([
 
@@ -15,7 +17,7 @@ function App() {
     })},[])
 
   return (
-<PokemonList data={state}/>
+      <PokemonList data={state}/>
   );
 }
 

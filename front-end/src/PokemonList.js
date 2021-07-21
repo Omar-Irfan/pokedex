@@ -1,5 +1,6 @@
 import React from "react";
 import Pokemon from "./Pokemon"
+import './extraCss.css';
 
 export default function PokemonList(props) {
 
@@ -26,7 +27,7 @@ export default function PokemonList(props) {
     />
   ))
   return(
-   <ul>{parsedPokemon}</ul>
+    <ul className="PokeList">{parsedPokemon}</ul>
   )
 
 }
