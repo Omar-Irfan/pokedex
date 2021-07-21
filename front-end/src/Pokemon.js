@@ -23,28 +23,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Pokemon() {
-  const testPokemon = {
-    "id": 1,
-    "name": {
-      "english": "Bulbasaur",
-      "japanese": "フシギダネ",
-      "chinese": "妙蛙种子",
-      "french": "Bulbizarre"
-    },
-    "type": [
-      "Grass",
-      "Poison"
-    ],
-    "base": {
-      "HP": 45,
-      "Attack": 49,
-      "Defense": 49,
-      "Sp. Attack": 65,
-      "Sp. Defense": 65,
-      "Speed": 45
-    }
-  }
+function Pokemon(props) {
+
   const testPokemonImg = "https://i.imgur.com/mgQBTVE.png"
 
   const testPokemonSprite = "https://i.imgur.com/yd6Y2Qw.png"
@@ -63,19 +43,19 @@ function Pokemon() {
           justifyContent="space-between"
           >
           <img src={testPokemonSprite} />
-          <Typography>{testPokemon.name.english}</Typography>
-          <Typography>Pokédex ID: {testPokemon.id}
+          <Typography>{props.name}</Typography>
+          <Typography>Pokédex ID: {props.id}
           </Typography>
           </Grid>
         </AccordionSummary>
         <AccordionDetails>
           <img src={testPokemonImg}/>
         <Grid className={classes.heading} container direction="column" alignItems="flex-end">
-          <Typography>Types: {testPokemon.type.toString().split(",").join(", ")}</Typography>
-          <Typography>HP: {testPokemon.base.HP}</Typography>
-          <Typography>Attack: {testPokemon.base.Attack}</Typography>
-          <Typography>Defense: {testPokemon.base.Defense}</Typography>
-          <Typography>Speed: {testPokemon.base.Speed}</Typography>
+          <Typography>Types: {props.types}</Typography>
+          <Typography>HP: {props.HP}</Typography>
+          <Typography>Attack: {props.Attack}</Typography>
+          <Typography>Defense: {props.Defense}</Typography>
+          <Typography>Speed: {props.Speed}</Typography>
         </Grid>
         </AccordionDetails>
       </Accordion>
