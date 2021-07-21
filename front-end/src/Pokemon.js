@@ -25,9 +25,10 @@ const useStyles = makeStyles((theme) => ({
 
 function Pokemon(props) {
 
-  const testPokemonImg = "https://i.imgur.com/mgQBTVE.png"
 
-  const testPokemonSprite = "https://i.imgur.com/yd6Y2Qw.png"
+  const thumbnail = `http://localhost:3001/thumbnails/${props.id}.png`
+
+  const sprite = `http://localhost:3001/sprites/${props.id}MS.png`
   const classes = useStyles();
 
   return (
@@ -42,14 +43,14 @@ function Pokemon(props) {
           <Grid className={classes.heading} container direction="row" alignItems="center"
           justifyContent="space-between"
           >
-          <img src={testPokemonSprite} />
+          <img src={sprite} />
           <Typography>{props.name}</Typography>
           <Typography>Pokédex ID: {props.id}
           </Typography>
           </Grid>
         </AccordionSummary>
         <AccordionDetails>
-          <img src={testPokemonImg}/>
+          <img src={thumbnail}/>
         <Grid className={classes.heading} container direction="column" alignItems="flex-end">
           <Typography>Types: {props.types}</Typography>
           <Typography>HP: {props.HP}</Typography>
