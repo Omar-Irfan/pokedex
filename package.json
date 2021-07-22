@@ -7,7 +7,7 @@
     "server": "nodemon index.js",
     "client": "cd front-end && npm start",
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "install-all": "concurrently \"npm install\" \"cd front-end && npm install\""
+    "install-client": "cd front-end && npm install"
   },
   "repository": {
     "type": "git",
