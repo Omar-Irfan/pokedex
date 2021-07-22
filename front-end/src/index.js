@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './extraCss.css';
-import App from './App';
+import PokemonList from "./PokemonList"
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PokemonList/>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -14,6 +14,13 @@ code {
     monospace;
 }
 
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
 .PokeList{
   display: flex;
   flex-direction: column;
@@ -23,6 +30,39 @@ code {
 }
 
 .Thumbnail{
-  margin-left: 15%;
+  margin-left: 5%;
 
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 0pc;
+  margin: 15px;
+  display: flex;
+  list-style: none;
+  outline: none;
+}
+.pagination > .active > a{
+  background-color: #fff ;
+  border-color: #fff ;
+  color: #fff;
+}
+.pagination > li > a{
+  border: 1px solid #fff ;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+  background-color: #fff ;
+  border-color: #fff;
+  outline: none ;
+}
+.pagination > li > a, .pagination > li > span{
+  color: #fff;
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
+  border-radius: unset
 }

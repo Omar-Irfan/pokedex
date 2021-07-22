@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: 'linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%)',
     border: 0,
     borderRadius: 3,
-    boxShadow: '0 3px 5px 2px grey',
     color: 'DarkBlue',
     width: '40%',
   },
