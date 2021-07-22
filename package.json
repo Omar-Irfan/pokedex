@@ -6,7 +6,8 @@
   "scripts": {
     "server": "nodemon index.js",
     "client": "cd front-end && npm start",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "concurrently \"npm install\" \"cd front-end && npm install\""
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,10 @@
   },
   "homepage": "https://github.com/Omar-Irfan/pokedex#readme",
   "dependencies": {
+    "cd": "^0.3.3",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "front-end": "^0.2.9"
   },
   "devDependencies": {
     "concurrently": "^6.2.0",
