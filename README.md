@@ -4,11 +4,11 @@ The Pokedex App is a Full-Stack application built using Express.js and React.js.
 
 ## Screenshots
 
-![Default Screen](/screenshots/sc1.pngraw=true "Default Screen")
+![Default Screen](screenshots/sc1.pngraw=true "Default Screen")
 
-![With Two Selections](/screenshots/sc2.pngraw=true "With Two Selections")
+![With Two Selections](screenshots/sc2.pngraw=true "With Two Selections")
 
-![Invalid Selection](/screenshots/sc3.pngraw=true "Invalid Selection")
+![Invalid Selection](screenshots/sc3.pngraw=true "Invalid Selection")
 
 ## How to use
 
