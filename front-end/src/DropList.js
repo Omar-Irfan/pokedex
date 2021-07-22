@@ -6,6 +6,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Chip from '@material-ui/core/Chip';
+import PokemonList from './PokemonList';
 const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
@@ -103,7 +104,7 @@ export default function DropList() {
           ))}
         </Select>
       </FormControl>
-
+      <PokemonList type={typeName}/>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import ReactPaginate from 'react-paginate';
 import Pokemon from "./Pokemon"
 import './extraCss.css';
 
-export default function PokemonList() {
+export default function PokemonList(props) {
   const [offset, setOffset] = useState(0);
   const [data, setData] = useState([]);
   const [perPage] = useState(10);
@@ -19,12 +19,17 @@ export default function PokemonList() {
     }
     return id
   }
-
-  const types = 'Fairy'
+  const selectedType = props.type.toString()
 
   const getData = async() => {
     const res = await axios.get('http://localhost:3001/pokedex.json')
-    const filteredData = res.data.filter(pokemon => pokemon.type.includes(types))
+    let filteredData;
+    if(props.type != []) {
+    filteredData = res.data.filter(pokemon => pokemon.type.includes(selectedType)) }
+    else {
+      filteredData = res.data
+    }
+    console.log(filteredData)
     const slice = filteredData.slice(offset , offset + perPage)
     const parsedPokemon =  slice.map((pokemon) => (
       <Pokemon

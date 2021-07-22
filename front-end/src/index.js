@@ -8,7 +8,6 @@ import DropList from "./DropList"
 ReactDOM.render(
   <React.StrictMode>
     <DropList/>
-    <PokemonList/>
   </React.StrictMode>,
   document.getElementById('root')
 );
