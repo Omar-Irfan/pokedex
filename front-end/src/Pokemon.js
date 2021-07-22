@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     border: 0,
     borderRadius: 3,
     color: 'DarkBlue',
-    width: '40%',
+    width: '60%',
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),

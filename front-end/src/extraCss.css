@@ -34,6 +34,13 @@ code {
 
 }
 
+.titleSearch{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .pagination {
   display: flex;
   flex-direction: row;
