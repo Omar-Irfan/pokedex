@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './extraCss.css';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({ //Sets style for each individual Pokemon component
   root: {
     backgroundColor: '#d9d9d9',
     backgroundImage: 'linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%)',
@@ -25,18 +25,17 @@ const useStyles = makeStyles((theme) => ({
 
 function Pokemon(props) {
 
-
-  const thumbnail = `http://localhost:3001/thumbnails/${props.id}.png`
-
-  const sprite = `http://localhost:3001/sprites/${props.id}MS.png`
-
+  const thumbnail = `http://localhost:3001/thumbnails/${props.id}.png` //gets thumbnail image based on Pokedex ID from server
+  const sprite = `http://localhost:3001/sprites/${props.id}MS.png` //gets sprite image based on Pokedex ID from server
   const classes = useStyles();
 
+
+  //Below renders each individual Pokemon component as a material UI accordian
   return (
 
       <Accordion className={classes.root}>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon color="DarkBlue" />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
