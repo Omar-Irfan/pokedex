@@ -20,10 +20,12 @@ export default function PokemonList() {
     return id
   }
 
+  const types = 'Fairy'
+
   const getData = async() => {
     const res = await axios.get('http://localhost:3001/pokedex.json')
-    const data = res.data;
-    const slice = data.slice(offset , offset + perPage)
+    const filteredData = res.data.filter(pokemon => pokemon.type.includes(types))
+    const slice = filteredData.slice(offset , offset + perPage)
     const parsedPokemon =  slice.map((pokemon) => (
       <Pokemon
       key={pokemon.id}
@@ -37,7 +39,7 @@ export default function PokemonList() {
       />
       ))
       setData(parsedPokemon)
-      setPageCount(Math.ceil(data.length / perPage))
+      setPageCount(Math.ceil(filteredData.length / perPage))
     }
 
   useEffect(() => {
